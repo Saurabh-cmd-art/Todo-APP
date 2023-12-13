@@ -47,4 +47,29 @@ public class UserDao {
 		
 	}
 
+	
+
+	public void updateTask(Task task) {
+		manager.getTransaction().begin();
+		manager.merge(task);
+		manager.getTransaction().commit();
+		
+	}
+
+     public Task findTaskId(int id) {
+		
+		return manager.find(Task.class, id);
+	}
+     public UserDto findById(int id)
+ 	{
+ 		return manager.find(UserDto.class, id);
+ 	}
+
+	public void deleteTask(Task task) {
+		manager.getTransaction().begin();
+		manager.remove(task);
+		manager.getTransaction().commit();
+		
+	}
+
 }

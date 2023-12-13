@@ -66,18 +66,14 @@ body {
 						 Completed<%
 						 }
 					   else{%>
-					 <button>Completed</button>
+					<a href="change-status?id=<%=task.getId() %>"><button>Completed</button></a> 
 					 <%
 					}
 						 %>
 					</th>
-
-
-
-
-
-					<th><button>Delete</button></th>
-					<th><button>Edit</button></th>
+					<th><a href="change-delete?id=<%=task.getId() %>"><button>Delete</button></th></a>
+					<th><a href="Edit?id=<%=task.getId() %>"><button>Delete</button></th></a>
+					
 				</tr>
 				<%
 				}
